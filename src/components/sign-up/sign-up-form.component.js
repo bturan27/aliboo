@@ -44,7 +44,7 @@ const SignUpForm = () =>{
     console.log({user});
     }
     catch(error) {
-        if(error.code == 'auth/email-already-in-use' ){
+        if(error.code === 'auth/email-already-in-use' ){
             alert('cannot create user, email already in use')
         }else{
         console.log('here is the ', error)
@@ -56,16 +56,25 @@ const SignUpForm = () =>{
             <h1>Sign Up with your email and password </h1>
             <form onSubmit={handleSubmit}>
                 {/* <label>Full Name</label> */}
-                <FormInput label="Full Name"type='text' required onChange={handleChange} name='fullName' value={fullName}/>
+                <FormInput 
+                label="Full Name"
+                inputOptions={{
+                type:'text',
+                required:true,
+                onChange:{handleChange},
+                name:'fullName',
+                value:fullName 
+                }}
+                />
 
-                {/* <label>Email</label> */}
+                {/* <label>Email</label>
                 <FormInput  label="email" type='email' required onChange={handleChange} name='email' value={email}/>
 
                 {/* <label>Password</label> */}
-                <FormInput  label="password" type='password' required onChange={handleChange} name='password' value={password}/>
+                {/* <FormInput  label="password" type='password' required onChange={handleChange} name='password' value={password}/> */}
 
                 {/* <label>Confirm Password</label> */}
-                <FormInput  label="confirm password "type='password' required onChange={handleChange} name='confirmPassword' value={confirmPassword}/>
+                {/* <FormInput  label="confirm password "type='password' required onChange={handleChange} name='confirmPassword' value={confirmPassword}/> */} 
                 <button type="submit">Sign Up</button>
             </form>
         </div>
