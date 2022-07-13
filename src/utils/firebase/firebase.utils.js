@@ -5,7 +5,9 @@ import {
     signInWithRedirect,
     signInWithPopup,
     GoogleAuthProvider,
-    createUserWithEmailAndPassword
+    createUserWithEmailAndPassword,
+    signInWithEmailAndPassword,
+    signOut,
 } from 'firebase/auth'
 
 import {
@@ -36,14 +38,22 @@ const firebaseConfig = {
     prompt: 'select_account',
   });
   export const auth = getAuth();
+
+  
   export const signInWithGooglePopup = () => signInWithPopup(auth,googleProvider);
+
+
   export const signInWithGoogleRedirect =() => signInWithRedirect(auth, googleProvider);
+
+
 
   export const db= getFirestore();
 
-  export const createUserDocumentFromAuth = async (userAuth, additionalInformation={fullName:'begum'}
+  export const createUserDocumentFromAuth = async (userAuth, additionalInformation={}
     ) => {
     if(!userAuth) return;
+
+
 
     const userDocRef = doc(db,'users',userAuth.uid);
 
@@ -79,3 +89,13 @@ export const createAuthUserWithEmailAndPassword = async (email,password) => {
 
   return await createUserWithEmailAndPassword (auth, email, password)
 }
+// we want to create another interface layer through a helper function
+
+export const signInAuthUserWithEmailAndPassword= async (email,password) => {
+  if (!email || !password) return;
+//if we do have either email or password, we dont want to run our function
+  return await signInWithEmailAndPassword (auth, email, password)
+}
+
+export const signOutUser= async() => await signOut(auth);
+

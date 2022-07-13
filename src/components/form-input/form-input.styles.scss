@@ -13,7 +13,7 @@ $main-color: rgb(19, 19, 19);
 
   .form-input {
     background: none;
-    background-color: rgb(168, 246, 167);
+    background-color: rgb(164, 245, 163);
     color: $sub-color;
     font-size: 18px;
     padding: 10px 10px 10px 5px;
@@ -25,12 +25,14 @@ $main-color: rgb(19, 19, 19);
     margin: 25px 0;
 
     &:focus {
-      outline:none;
-      background-color:blanchedalmond;
+     outline: none;
     }
 
     &:focus ~ .form-input-label {
       @include shrinkLabel();
+      outline:1px solid var(--clr-primary);
+      background-color:rgb(237, 234, 231);
+      margin: 10px;
     }
   }
 
