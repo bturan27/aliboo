@@ -1,4 +1,4 @@
-import {useState, useContext} from 'react';
+import {useState} from 'react';
 
 
 import FormInput from '../form-input/form-input.component'
@@ -8,12 +8,12 @@ import Button , {BUTTON_TYPE_CLASSES} from '../button/button.component';
 
 import "./sign-in-form.styles.scss";
 
-import { UserContext } from '../../contexts/user.context';
 
 
 
 import  {signInWithGooglePopup,
-    signInAuthUserWithEmailAndPassword} from '../../utils/firebase/firebase.utils'
+    signInAuthUserWithEmailAndPassword,
+    createUserDocumentFromAuth} from '../../utils/firebase/firebase.utils'
 
 
 const defaultFormFields = {
@@ -26,7 +26,6 @@ const SignInForm = () => {
     const [formFields, setFormFields] = useState(defaultFormFields);
     const { email, password}= formFields;
 
-    const {setCurrentUser} =useContext(UserContext)
 
 
     const resetFormFields = () => {
@@ -34,9 +33,8 @@ const SignInForm = () => {
     }
 /// sign in with google pop up method firebase utilden geliyor?
     const signInWithGoogle =async () => {
-        const {user} =await signInWithGooglePopup();
-        setCurrentUser(user);
-        console.log(user);
+        await signInWithGooglePopup();
+    
     }
 
     const handleSubmit = async (event) =>{
@@ -44,23 +42,11 @@ const SignInForm = () => {
 
 
     try {
-        const {user} =await signInAuthUserWithEmailAndPassword(email,password);
-        
+        await signInAuthUserWithEmailAndPassword(email,password);
         resetFormFields();
-        setCurrentUser(user);
+    
     }catch(error) {
-        switch(error.code){
-            ///switch statement allows me to do :is run code depending on what gets matched inside of code
-            case 'auth/wrong-password':
-                alert('incorrect password for email');
-                break;
-            ///the break essentially says that once you have found a match, dont check the next subsequent cases.
-            case 'auth/user-not-found':
-                alert('no user associated with this email');
-                break;
-            default:
-                console.log(error)
-        }
+        console.log('user sign in failed', error);
     }
 }
     const handleChange = (event) => {
@@ -93,7 +79,7 @@ const SignInForm = () => {
             <div className='buttons-container'>
             <Button type='submit'>Sign In</Button>
             <Button
-                buttonType={BUTTON_TYPE_CLASSES.google}
+                buttonType='google'
                 type='button'
                 onClick={signInWithGoogle}
             >

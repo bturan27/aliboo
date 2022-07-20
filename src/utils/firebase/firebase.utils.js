@@ -8,6 +8,7 @@ import {
     createUserWithEmailAndPassword,
     signInWithEmailAndPassword,
     signOut,
+    onAuthStateChanged
 } from 'firebase/auth'
 
 import {
@@ -49,7 +50,8 @@ const firebaseConfig = {
 
   export const db= getFirestore();
 
-  export const createUserDocumentFromAuth = async (userAuth, additionalInformation={}
+  export const createUserDocumentFromAuth = async (userAuth, 
+    additionalInformation={}
     ) => {
     if(!userAuth) return;
 
@@ -98,4 +100,10 @@ export const signInAuthUserWithEmailAndPassword= async (email,password) => {
 }
 
 export const signOutUser= async() => await signOut(auth);
+
+//asagida creating a listener below
+// next:callback,error:errorcallback, complete:completedcallback
+export const onAuthStateChangedListener = (callback) => {
+  onAuthStateChanged(auth, callback);
+}
 

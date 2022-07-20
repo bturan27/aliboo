@@ -9,9 +9,9 @@ const Home = () => {
     {
     id:1,
     title: "Carrasca Z",
-    imageUrl: "https://scontent-sea1-1.xx.fbcdn.net/v/t39.30808-6/290995915_10220592198226536_3693661798359621383_n.jpg?stp=cp1_dst-jpg_p403x403&_nc_cat=108&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=jYV4vdeCG64AX_0L2A6&_nc_ht=scontent-sea1-1.xx&oh=00_AT8wMtxBiBEnJCgy3c76erqE0rDfxnbtGgAIjXMNcsiLTg&oe=62C2DA4D"
-    // price : "",
-    // personalCharacter : "",
+    imageUrl: "https://scontent-dfw5-2.xx.fbcdn.net/v/t39.30808-6/260988745_4562185537163569_5677428464463171962_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=a26aad&_nc_ohc=EBLxvMODO6UAX_6yfmB&tn=Oo6z2oDmeVkwXeVz&_nc_ht=scontent-dfw5-2.xx&oh=00_AT96I03m8t_we9s9A-luDjh4WAwwT0OJiGuJ59w3TOcotg&oe=62D793F8",
+    price : "",
+    personalCharacter : "",
     },
     {
       id:2,
@@ -30,9 +30,9 @@ const Home = () => {
     {
       id:4,
       title: "Blue Z",
-      imageUrl: "https://scontent-sea1-1.xx.fbcdn.net/v/t31.18172-8/28061241_10155705260278451_3336095654921467835_o.jpg?_nc_cat=106&ccb=1-7&_nc_sid=730e14&_nc_ohc=NdBu8tCL58IAX8VOGUp&_nc_ht=scontent-sea1-1.xx&oh=00_AT-ylCrXWzrABJKJ1pMBaDVTNWRW9Mjwm6xWE3zl0Cjlrw&oe=62E49E63"
-      // price : "",
-      // personalCharacter : ""
+      imageUrl: "https://scontent-dfw5-1.xx.fbcdn.net/v/t1.6435-9/125007306_3480446395337494_8968964086664094365_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=a26aad&_nc_ohc=leivS4HRALgAX_by6dq&_nc_ht=scontent-dfw5-1.xx&oh=00_AT9gE5r6CFsfSyN1obLw9cq0IqfwLry6VTVy4x63bNoXUQ&oe=62F89A3D",
+      price : "",
+      personalCharacter : ""
     },
     {
       id:5,
