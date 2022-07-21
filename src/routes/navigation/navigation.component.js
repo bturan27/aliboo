@@ -21,6 +21,8 @@ import CartIcon from '../../components/cart-icon/cart-icon.component';
 
 const Navigation = () => {
     const {currentUser} = useContext(UserContext);
+    const {isCartOpen} = useContext(CartContext);
+
 
     // console.log(currentUser);
     return(
@@ -46,7 +48,7 @@ const Navigation = () => {
                         )}
                         <CartIcon />
                 </div>
-                <CartDropdown />
+                {isCartOpen && <CartDropdown /> }
             </div>
         <Outlet/>
         </Fragment>
