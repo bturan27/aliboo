@@ -1,55 +1,56 @@
 [
-    {
-        "id": 1,
-        "name": "A",
-        "imageUrl": "https://scontent-dfw5-2.xx.fbcdn.net/v/t1.6435-9/117403057_3201702696545200_4839600939228281252_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=IsACbN3k7LMAX_0LWuP&_nc_ht=scontent-dfw5-2.xx&oh=00_AT-OOWnOpAvIhjT5cVvbKW3-Ej_aujrumEXD8IAzyMmbfw&oe=62FA7406",
-        "price": 25
-    },
-    {
-        "id": 2,
-        "name": "B",
-        "imageUrl": "https://scontent-lax3-2.xx.fbcdn.net/v/t1.6435-9/71005959_10157245591913451_4951529519086305280_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=Ue_0po8BDb4AX_xWoGk&_nc_oc=AQncZmecdKevftRHmOmW4wR2_8dEm-kRpb_-BKlDBKOkHs9TH0uhOXaopfVX_bo7kQE&_nc_ht=scontent-lax3-2.xx&oh=00_AT9yw3J5LUjwEMYjNrnx1zikTMiVFEV3szjW124sQUOHmA&oe=62D6D584"
-    },
-    {
-        "id": 3,
-        "name": "C",
-        "imageUrl":" https://scontent-dfw5-1.xx.fbcdn.net/v/t39.30808-6/258515944_4562185533830236_3751190776090433621_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=a26aad&_nc_ohc=XDnZ2O_mBdIAX-CZ0mb&_nc_ht=scontent-dfw5-1.xx&oh=00_AT_av4FFYp49YkN40NuEE-dEO3B8dFXAyCAiH2gN75iShA&oe=62D7F440",
-        "price": 35
-    },
-    {
-        "id": 4,
-        "name": "D",
-        "imageUrl": "https://scontent-dfw5-1.xx.fbcdn.net/v/t1.6435-9/127986376_3518700054845461_4806493817332782991_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=6cB0P99qCwkAX8XHrfL&_nc_ht=scontent-dfw5-1.xx&oh=00_AT_Tu9WNEofJmUrUxAG3JFBe3sEqmiBCYK55PvtQBS0eQQ&oe=62FA3E4D",
-        "price": 25
-    },
-    {
-        "id": 5,
-        "name": "E",
-        "imageUrl": "https://scontent-dfw5-1.xx.fbcdn.net/v/t1.6435-9/127855582_3521289621253171_408483783560850807_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=XuSKExrXgfcAX8iQoOd&_nc_ht=scontent-dfw5-1.xx&oh=00_AT-Jh7mH2zkSnuW3KFIuHLb94FSdmQnkDw-0sIHodPPIMw&oe=62F80FD2",
-        "price": 18
-    },
-    {
-        "id": 6,
-        "name": "F",
-        "imageUrl":"https://scontent-lax3-2.xx.fbcdn.net/v/t1.6435-9/118766396_10222108061224263_8743581715493119984_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=cdbe9c&_nc_ohc=lV3QWj2Sc-EAX-R8TlN&_nc_ht=scontent-lax3-2.xx&oh=00_AT_XvXRmTJd_deJ2DHIV-zJF4Cryqo3rQ9WkiqOk7rmwFw&oe=62D7E156",
-        "price": 14
-    },
-    {
-        "id": 7,
-        "name": "G",
-        "imageUrl": "https://scontent-dfw5-1.xx.fbcdn.net/v/t39.30808-6/261076934_4561985623850227_2781507123901158707_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=Lh_IQHhhL_sAX8qpY_S&_nc_ht=scontent-dfw5-1.xx&oh=00_AT9KWpnPrW7lakr7k28tTeIK9HHfkPEuP7RgzLfTUNpdcw&oe=62D791F0",
-        "price": 18
-    },
-    {
-        "id": 8,
-        "name": "H",
-        "imageUrl": "https://scontent-lax3-2.xx.fbcdn.net/v/t1.6435-9/118766396_10222108061224263_8743581715493119984_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=cdbe9c&_nc_ohc=lV3QWj2Sc-EAX-R8TlN&_nc_ht=scontent-lax3-2.xx&oh=00_AT_XvXRmTJd_deJ2DHIV-zJF4Cryqo3rQ9WkiqOk7rmwFw&oe=62D7E156",
-        "price": 14
-    },
-    {
-        "id": 9,
-        "name": "E",
-        "imageUrl": "https://scontent-dfw5-2.xx.fbcdn.net/v/t39.30808-6/260988745_4562185537163569_5677428464463171962_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=a26aad&_nc_ohc=EBLxvMODO6UAX_6yfmB&tn=Oo6z2oDmeVkwXeVz&_nc_ht=scontent-dfw5-2.xx&oh=00_AT96I03m8t_we9s9A-luDjh4WAwwT0OJiGuJ59w3TOcotg&oe=62D793F8",
-        "price": 16
-    }
+  {
+    "id": 1,
+    "name": "Brown Brim",
+    "imageUrl": "https://i.ibb.co/ZYW3VTp/brown-brim.png",
+    "price": 25
+  },
+  {
+    "id": 2,
+    "name": "Blue Beanie",
+    "imageUrl": "https://i.ibb.co/ypkgK0X/blue-beanie.png",
+    "price": 18
+  },
+  {
+    "id": 3,
+    "name": "Brown Cowboy",
+    "imageUrl": "https://i.ibb.co/QdJwgmp/brown-cowboy.png",
+    "price": 35
+  },
+  {
+    "id": 4,
+    "name": "Grey Brim",
+    "imageUrl": "https://i.ibb.co/RjBLWxB/grey-brim.png",
+    "price": 25
+  },
+  {
+    "id": 5,
+    "name": "Green Beanie",
+    "imageUrl": "https://i.ibb.co/YTjW3vF/green-beanie.png",
+    "price": 18
+  },
+  {
+    "id": 6,
+    "name": "Palm Tree Cap",
+    "imageUrl": "https://i.ibb.co/rKBDvJX/palm-tree-cap.png",
+    "price": 14
+  },
+  {
+    "id": 7,
+    "name": "Red Beanie",
+    "imageUrl": "https://i.ibb.co/bLB646Z/red-beanie.png",
+    "price": 18
+  },
+  {
+    "id": 8,
+    "name": "Wolf Cap",
+    "imageUrl": "https://i.ibb.co/1f2nWMM/wolf-cap.png",
+    "price": 14
+  },
+  {
+    "id": 9,
+    "name": "Blue Snapback",
+    "imageUrl": "https://i.ibb.co/X2VJP2W/blue-snapback.png",
+    "price": 16
+  }
 ]
