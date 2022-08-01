@@ -18,10 +18,10 @@ const Checkout = () => {
                 <span>Descriptionn</span>
             </div>
             <div className='header-block'>
-                <span>Quantity</span>
+                <span> Quantity</span>
             </div>
             <div className='header-block'>
-                <span> Price</span>
+                <span>Price</span>
             </div>
             <div className='header-block'>
                 <span> Remove</span>
@@ -30,7 +30,7 @@ const Checkout = () => {
         {cartItems.map((cartItem)=> 
                 <CheckoutItem key={cartItem.id} cartItem= {cartItem} />
         )}
-            <span className='Total'> Total: 0'</span>
+            <span className='total'> Total: 0</span>
     </div>
     )}
 export default  Checkout;
