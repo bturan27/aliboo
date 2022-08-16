@@ -8,14 +8,17 @@ import {
     createUserWithEmailAndPassword,
     signInWithEmailAndPassword,
     signOut,
-    onAuthStateChanged
+    onAuthStateChanged,
+
 } from 'firebase/auth'
 
 import {
   getFirestore,
   doc,
   getDoc,
-  setDoc
+  setDoc,
+  collection,
+  writeBatch
 }
 from 'firebase/firestore'
 
@@ -49,6 +52,10 @@ const firebaseConfig = {
 
 
   export const db= getFirestore();
+
+  export const addColletionAndDocuments = (collectionKey, objectsToAdd) => {
+    
+  }
 
   export const createUserDocumentFromAuth = async (userAuth, 
     additionalInformation={}
