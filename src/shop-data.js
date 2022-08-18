@@ -1,58 +1,242 @@
-const SHOP_DATA =[
+const SHOP_DATA = [
   {
-    "id": 1,
-    "name": "Horse 1",
-    "imageUrl": "https://scontent-lax3-1.xx.fbcdn.net/v/t39.30808-6/267130306_4619482618100527_2878475205334164258_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=qztv6NmzxsUAX-LZuII&tn=Oo6z2oDmeVkwXeVz&_nc_ht=scontent-lax3-1.xx&oh=00_AT9I_ote26ya7T-Rm2dI57q44J_8EfnsrXtJeQfatvXR2A&oe=62EC279E",
-    "price": 25
+    title: 'Hats',
+    items: [
+      {
+        id: 1,
+        name: 'Brown Brim',
+        imageUrl: 'https://i.ibb.co/ZYW3VTp/brown-brim.png',
+        price: 25,
+      },
+      {
+        id: 2,
+        name: 'Blue Beanie',
+        imageUrl: 'https://i.ibb.co/ypkgK0X/blue-beanie.png',
+        price: 18,
+      },
+      {
+        id: 3,
+        name: 'Brown Cowboy',
+        imageUrl: 'https://i.ibb.co/QdJwgmp/brown-cowboy.png',
+        price: 35,
+      },
+      {
+        id: 4,
+        name: 'Grey Brim',
+        imageUrl: 'https://i.ibb.co/RjBLWxB/grey-brim.png',
+        price: 25,
+      },
+      {
+        id: 5,
+        name: 'Green Beanie',
+        imageUrl: 'https://i.ibb.co/YTjW3vF/green-beanie.png',
+        price: 18,
+      },
+      {
+        id: 6,
+        name: 'Palm Tree Cap',
+        imageUrl: 'https://i.ibb.co/rKBDvJX/palm-tree-cap.png',
+        price: 14,
+      },
+      {
+        id: 7,
+        name: 'Red Beanie',
+        imageUrl: 'https://i.ibb.co/bLB646Z/red-beanie.png',
+        price: 18,
+      },
+      {
+        id: 8,
+        name: 'Wolf Cap',
+        imageUrl: 'https://i.ibb.co/1f2nWMM/wolf-cap.png',
+        price: 14,
+      },
+      {
+        id: 9,
+        name: 'Blue Snapback',
+        imageUrl: 'https://i.ibb.co/X2VJP2W/blue-snapback.png',
+        price: 16,
+      },
+    ],
   },
   {
-    "id": 2,
-    "name": "Horse 2",
-    "imageUrl": "https://scontent-lax3-2.xx.fbcdn.net/v/t1.6435-9/123270485_3450452655003535_6233055769148908411_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=174925&_nc_ohc=jCyCRIjNjm8AX91imk1&_nc_oc=AQlhZfy0qDpMfZNoxJHwqJnPjpGMzKf60qKMtgpisJ1p2s0u-na-MkNCjH_f7ztOEU0&_nc_ht=scontent-lax3-2.xx&oh=00_AT9AG6BBQaV0t9OJadghaDMxq3Tt7LuXUiM7Hosi06OemQ&oe=630ECC79",
-    "price": 18
+    title: 'Sneakers',
+    items: [
+      {
+        id: 10,
+        name: 'Adidas NMD',
+        imageUrl: 'https://i.ibb.co/0s3pdnc/adidas-nmd.png',
+        price: 220,
+      },
+      {
+        id: 11,
+        name: 'Adidas Yeezy',
+        imageUrl: 'https://i.ibb.co/dJbG1cT/yeezy.png',
+        price: 280,
+      },
+      {
+        id: 12,
+        name: 'Black Converse',
+        imageUrl: 'https://i.ibb.co/bPmVXyP/black-converse.png',
+        price: 110,
+      },
+      {
+        id: 13,
+        name: 'Nike White AirForce',
+        imageUrl: 'https://i.ibb.co/1RcFPk0/white-nike-high-tops.png',
+        price: 160,
+      },
+      {
+        id: 14,
+        name: 'Nike Red High Tops',
+        imageUrl: 'https://i.ibb.co/QcvzydB/nikes-red.png',
+        price: 160,
+      },
+      {
+        id: 15,
+        name: 'Nike Brown High Tops',
+        imageUrl: 'https://i.ibb.co/fMTV342/nike-brown.png',
+        price: 160,
+      },
+      {
+        id: 16,
+        name: 'Air Jordan Limited',
+        imageUrl: 'https://i.ibb.co/w4k6Ws9/nike-funky.png',
+        price: 190,
+      },
+      {
+        id: 17,
+        name: 'Timberlands',
+        imageUrl: 'https://i.ibb.co/Mhh6wBg/timberlands.png',
+        price: 200,
+      },
+    ],
   },
   {
-    "id": 3,
-    "name": "Horse 1",
-    "imageUrl": "https://scontent-lax3-2.xx.fbcdn.net/v/t1.18169-9/13332773_1039660372749454_2473819327971377509_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=174925&_nc_ohc=Vz_nCo5ISmYAX9kxrS6&_nc_ht=scontent-lax3-2.xx&oh=00_AT8LpeXba43NeBJKheESXTlUzUj7j9eX23fXsyjNc4sLEg&oe=630C87F5",
-    "price": 35
+    id: 3,
+    title: 'Jackets',
+    items: [
+      {
+        id: 18,
+        name: 'Black Jean Shearling',
+        imageUrl: 'https://i.ibb.co/XzcwL5s/black-shearling.png',
+        price: 125,
+      },
+      {
+        id: 19,
+        name: 'Blue Jean Jacket',
+        imageUrl: 'https://i.ibb.co/mJS6vz0/blue-jean-jacket.png',
+        price: 90,
+      },
+      {
+        id: 20,
+        name: 'Grey Jean Jacket',
+        imageUrl: 'https://i.ibb.co/N71k1ML/grey-jean-jacket.png',
+        price: 90,
+      },
+      {
+        id: 21,
+        name: 'Brown Shearling',
+        imageUrl: 'https://i.ibb.co/s96FpdP/brown-shearling.png',
+        price: 165,
+      },
+      {
+        id: 22,
+        name: 'Tan Trench',
+        imageUrl: 'https://i.ibb.co/M6hHc3F/brown-trench.png',
+        price: 185,
+      },
+    ],
   },
   {
-    "id": 4,
-    "name": "Horse 1",
-    "imageUrl": "https://scontent-lax3-1.xx.fbcdn.net/v/t31.18172-8/12829004_989360961112729_5630387404099488752_o.jpg?_nc_cat=108&ccb=1-7&_nc_sid=174925&_nc_ohc=bMzb3GTi0hoAX9GNJ_i&_nc_ht=scontent-lax3-1.xx&oh=00_AT_u4CltyYH-mh01kF67Y-RrkJoQSTIoLeLNuql6DgitMw&oe=630F5D74",
-    "price": 25
+    id: 4,
+    title: 'Womens',
+    items: [
+      {
+        id: 23,
+        name: 'Blue Tanktop',
+        imageUrl: 'https://i.ibb.co/7CQVJNm/blue-tank.png',
+        price: 25,
+      },
+      {
+        id: 24,
+        name: 'Floral Blouse',
+        imageUrl: 'https://i.ibb.co/4W2DGKm/floral-blouse.png',
+        price: 20,
+      },
+      {
+        id: 25,
+        name: 'Floral Dress',
+        imageUrl: 'https://i.ibb.co/KV18Ysr/floral-skirt.png',
+        price: 80,
+      },
+      {
+        id: 26,
+        name: 'Red Dots Dress',
+        imageUrl: 'https://i.ibb.co/N3BN1bh/red-polka-dot-dress.png',
+        price: 80,
+      },
+      {
+        id: 27,
+        name: 'Striped Sweater',
+        imageUrl: 'https://i.ibb.co/KmSkMbH/striped-sweater.png',
+        price: 45,
+      },
+      {
+        id: 28,
+        name: 'Yellow Track Suit',
+        imageUrl: 'https://i.ibb.co/v1cvwNf/yellow-track-suit.png',
+        price: 135,
+      },
+      {
+        id: 29,
+        name: 'White Blouse',
+        imageUrl: 'https://i.ibb.co/qBcrsJg/white-vest.png',
+        price: 20,
+      },
+    ],
   },
   {
-    "id": 5,
-    "name": "Horse 1",
-    "imageUrl": "https://scontent-lax3-2.xx.fbcdn.net/v/t31.18172-8/10620072_987512007964291_3085327807632399487_o.jpg?_nc_cat=107&ccb=1-7&_nc_sid=174925&_nc_ohc=YNj8NI7YREwAX8eWa-w&tn=Oo6z2oDmeVkwXeVz&_nc_ht=scontent-lax3-2.xx&oh=00_AT-qSMQlQIvV_hcKsJkYnGh_eCOFfekQbTR1FBq006mXlg&oe=630C1B95",
-    "price": 18
+    id: 5,
+    title: 'Mens',
+    items: [
+      {
+        id: 30,
+        name: 'Camo Down Vest',
+        imageUrl: 'https://i.ibb.co/xJS0T3Y/camo-vest.png',
+        price: 325,
+      },
+      {
+        id: 31,
+        name: 'Floral T-shirt',
+        imageUrl: 'https://i.ibb.co/qMQ75QZ/floral-shirt.png',
+        price: 20,
+      },
+      {
+        id: 32,
+        name: 'Black & White Longsleeve',
+        imageUrl: 'https://i.ibb.co/55z32tw/long-sleeve.png',
+        price: 25,
+      },
+      {
+        id: 33,
+        name: 'Pink T-shirt',
+        imageUrl: 'https://i.ibb.co/RvwnBL8/pink-shirt.png',
+        price: 25,
+      },
+      {
+        id: 34,
+        name: 'Jean Long Sleeve',
+        imageUrl: 'https://i.ibb.co/VpW4x5t/roll-up-jean-shirt.png',
+        price: 40,
+      },
+      {
+        id: 35,
+        name: 'Burgundy T-shirt',
+        imageUrl: 'https://i.ibb.co/mh3VM1f/polka-dot-shirt.png',
+        price: 25,
+      },
+    ],
   },
-  {
-    "id": 6,
-    "name": "Horse 1",
-    "imageUrl": "https://scontent-lax3-2.xx.fbcdn.net/v/t1.18169-9/1482940_603247813057381_1966736194_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=de6eea&_nc_ohc=nkQqH7WDnMwAX_0lNcN&_nc_ht=scontent-lax3-2.xx&oh=00_AT9voeSek0UPrSFP_ib7j9hYUCGdE0RcwG6_Ur52Kkhv7w&oe=630E37D7",
-    "price": 14
-  },
-  {
-    "id": 7,
-    "name": "Horse 1",
-    "imageUrl": "https://scontent-lax3-1.xx.fbcdn.net/v/t1.18169-9/560172_371057239609774_1565375868_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=174925&_nc_ohc=Df5KzQ_LEowAX9v2Oy0&_nc_ht=scontent-lax3-1.xx&oh=00_AT-BKu7b-F4a8Q1C4w9BEBb7Au05GYa1p9oRS4Yy3YoYBA&oe=630C916E",
-    "price": 18
-  },
-  {
-    "id": 8,
-    "name": "Horse 1",
-    "imageUrl": "https://scontent-lax3-1.xx.fbcdn.net/v/t1.18169-9/299174_234982186550614_1362751188_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=174925&_nc_ohc=XTGHYs4JpFgAX-U_9V8&_nc_ht=scontent-lax3-1.xx&oh=00_AT-v2PkjmsIbKaZRPEqWOa1aZv_s37_157VsoplWZ3V6oA&oe=630D4ECC",
-    "price": 14
-  },
-  {
-    "id": 9,
-    "name": "Horse 1",
-    "imageUrl": "https://scontent-lax3-2.xx.fbcdn.net/v/t1.18169-9/197144_174080332640800_2557196_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=174925&_nc_ohc=aUyg16mOyJsAX8xd7_5&_nc_ht=scontent-lax3-2.xx&oh=00_AT8t7pmWckeWSr3QMeb2x7vR_ELfs4i8lyK-FtzdMb3ptw&oe=630F29FD",
-    "price": 16
-  }
-]
+];
 
 export default SHOP_DATA;

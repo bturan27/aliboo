@@ -1,139 +1,122 @@
-import {initializeApp} from 'firebase/app';
-
+import { initializeApp } from 'firebase/app';
 import {
-    getAuth,
-    signInWithRedirect,
-    signInWithPopup,
-    GoogleAuthProvider,
-    createUserWithEmailAndPassword,
-    signInWithEmailAndPassword,
-    signOut,
-    onAuthStateChanged,
-
-} from 'firebase/auth'
-
+  getAuth,
+  signInWithRedirect,
+  signInWithPopup,
+  GoogleAuthProvider,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  signOut,
+  onAuthStateChanged,
+} from 'firebase/auth';
 import {
   getFirestore,
   doc,
   getDoc,
+  getDocs,
   setDoc,
   collection,
   writeBatch,
   query,
-  getDocs,
-  DocumentSnapshot
-}
-from 'firebase/firestore'
+} from 'firebase/firestore';
 
-
-// Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyAcQOUytgkBSCnmJXGKCXbh37-gEkBfEto",
-    authDomain: "aliboo-db.firebaseapp.com",
-    projectId: "aliboo-db",
-    storageBucket: "aliboo-db.appspot.com",
-    messagingSenderId: "1021660285139",
-    appId: "1:1021660285139:web:da0fd7ca1af022cdd42c26"
-  };
-  
-  // Initialize Firebase
-  const firebaseApp = initializeApp(firebaseConfig);
-
-  const googleProvider = new GoogleAuthProvider();
-
-  googleProvider.setCustomParameters({
-    prompt: 'select_account',
-  });
-  export const auth = getAuth();
-
-  
-  export const signInWithGooglePopup = () => signInWithPopup(auth,googleProvider);
-
-
-  export const signInWithGoogleRedirect =() => signInWithRedirect(auth, googleProvider);
-
-
-
-  export const db= getFirestore();
-
-  export const addColletionAndDocuments = async(collectionKey, objectsToAdd,
-    field) => {
-    const collectionRef = collection (db, collectionKey);
-    const batch = writeBatch(db);
-
-    objectsToAdd.forEach((object) => {
-      const docRef = doc(collectionRef, object.name.toLowerCase());
-      batch.set(docRef, object);
-  });
-    await batch.commit();
-    console.log('done');
+  apiKey: 'AIzaSyDDU4V-_QV3M8GyhC9SVieRTDM4dbiT0Yk',
+  authDomain: 'crwn-clothing-db-98d4d.firebaseapp.com',
+  projectId: 'crwn-clothing-db-98d4d',
+  storageBucket: 'crwn-clothing-db-98d4d.appspot.com',
+  messagingSenderId: '626766232035',
+  appId: '1:626766232035:web:506621582dab103a4d08d6',
 };
-  export const getCategoriesAndDocuments = async () => {
-    const collectionRef = collection (db, 'categories');
-    const q = query (collectionRef);
 
-    const querySnapshot = await getDocs(q);
-    const categoryMap = querySnapshot.docs.reduce((acc, docSnapshot)=>{
-      const {name, items} = docSnapshot.data();
-      acc[name.toLowerCase()]= items;
-      return acc;
-    }, {})
-  }
+const firebaseApp = initializeApp(firebaseConfig);
 
-  export const createUserDocumentFromAuth = async (userAuth, 
-    additionalInformation={}
-    ) => {
-    if(!userAuth) return;
+const googleProvider = new GoogleAuthProvider();
 
+googleProvider.setCustomParameters({
+  prompt: 'select_account',
+});
 
+export const auth = getAuth();
+export const signInWithGooglePopup = () =>
+  signInWithPopup(auth, googleProvider);
+export const signInWithGoogleRedirect = () =>
+  signInWithRedirect(auth, googleProvider);
 
-    const userDocRef = doc(db,'users',userAuth.uid);
+export const db = getFirestore();
 
-    console.log(userDocRef);
+export const addCollectionAndDocuments = async (
+  collectionKey,
+  objectsToAdd
+) => {
+  const batch = writeBatch(db);
+  const collectionRef = collection(db, collectionKey);
+  
+  objectsToAdd.forEach((object) => {
+     const docRef = doc(collectionRef, object.title.toLowerCase());
+     batch.set(docRef, object);
+  });
 
+  await batch.commit();
+  console.log('done');
+};
+
+export const getCategoriesAndDocuments = async () => {
+  const collectionRef = collection(db, 'categories');
+  const q = query(collectionRef);
+
+  const querySnapshot = await getDocs(q);
+  const categoryMap = querySnapshot.docs.reduce((acc, docSnapshot) => {
+    const { title, items } = docSnapshot.data();
+    acc[title.toLowerCase()] = items;
+    return acc;
+  }, {});
+
+  return categoryMap;
+};
+
+export const createUserDocumentFromAuth = async (
+  userAuth,
+  additionalInformation = {}
+) => {
+  if (!userAuth) return;
+
+  const userDocRef = doc(db, 'users', userAuth.uid);
 
   const userSnapshot = await getDoc(userDocRef);
 
-
-  if(!userSnapshot.exists()) {
-    const { fullName, email} = userAuth;
+  if (!userSnapshot.exists()) {
+    const { displayName, email } = userAuth;
     const createdAt = new Date();
 
     try {
       await setDoc(userDocRef, {
-        fullName,
+        displayName,
         email,
         createdAt,
-        ...additionalInformation
+        ...additionalInformation,
       });
-      console.log(userDocRef)
     } catch (error) {
-      console.log('error creating  the user', error.message);
+      console.log('error creating the user', error.message);
     }
   }
 
   return userDocRef;
 };
 
-//asagida yetkili email ve password ile  verilmis bi user yarattik
-export const createAuthUserWithEmailAndPassword = async (email,password) => {
+export const createAuthUserWithEmailAndPassword = async (email, password) => {
   if (!email || !password) return;
 
-  return await createUserWithEmailAndPassword (auth, email, password)
-}
-// we want to create another interface layer through a helper function
+  return await createUserWithEmailAndPassword(auth, email, password);
+};
 
-export const signInAuthUserWithEmailAndPassword= async (email,password) => {
+export const signInAuthUserWithEmailAndPassword = async (email, password) => {
   if (!email || !password) return;
-//if we do have either email or password, we dont want to run our function
-  return await signInWithEmailAndPassword (auth, email, password)
-}
 
-export const signOutUser= async() => await signOut(auth);
+  return await signInWithEmailAndPassword(auth, email, password);
+};
 
-//asagida creating a listener below
-// next:callback,error:errorcallback, complete:completedcallback
-export const onAuthStateChangedListener = (callback) => {
+export const signOutUser = async () => await signOut(auth);
+
+export const onAuthStateChangedListener = (callback) =>
   onAuthStateChanged(auth, callback);
-}
-
