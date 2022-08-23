@@ -1,17 +1,17 @@
 const SHOP_DATA = [
   {
-    title: 'Hats',
+    title: 'horse',
     items: [
       {
         id: 1,
-        name: 'Brown Brim',
-        imageUrl: 'https://i.ibb.co/ZYW3VTp/brown-brim.png',
+        name: 'horse1',
+        imageUrl: '',
         price: 25,
       },
       {
         id: 2,
-        name: 'Blue Beanie',
-        imageUrl: 'https://i.ibb.co/ypkgK0X/blue-beanie.png',
+        name: 'horse2',
+        imageUrl: '',
         price: 18,
       },
       {
@@ -59,7 +59,7 @@ const SHOP_DATA = [
     ],
   },
   {
-    title: 'Sneakers',
+    title: 'babyhorse',
     items: [
       {
         id: 10,
