@@ -1,5 +1,5 @@
 const SHOP_DATA = [
-  {
+  {                                                  
     title: 'horse',
     items: [
       {
