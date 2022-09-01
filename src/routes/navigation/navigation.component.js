@@ -17,7 +17,7 @@ import { CartContext } from '../../contexts/cart.context';
 import CartIcon from '../../components/cart-icon/cart-icon.component';
 
 
-
+import { NavigationContainer } from './navigation.styles';
 
 const Navigation = () => {
     const {currentUser} = useContext(UserContext);

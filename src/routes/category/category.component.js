@@ -1,4 +1,4 @@
-import  {useContext, useState, useEffect} from 'react'
+import  {useContext, useState, useEffect, Fragment} from 'react'
 
 import { CategoriesContext } from '../../contexts/categories.context';
 
@@ -16,13 +16,15 @@ const Category = () => {
     }, [category, categoriesMap])
 
     return (
+        <Fragment> 
+        <h2 className='category-title'> {category.toUpperCase()} </h2>
         <div className='category-container'>
-            <h2  className='title'>{category}</h2>
             {products &&
             products.map((product) => (
             <ProductCard key={product.id}  product={product} />
             ))}
         </div>
+        </Fragment>
     )
 }
 
