@@ -3,7 +3,7 @@ import { Fragment ,useContext } from 'react';
 import  {Outlet, Link} from 'react-router-dom';
 
 // import {ReactComponent as HorseLogo} from '../../assets/crown.svg'
-import './navigation.styles.scss';
+import './navigation.styles.js';
 
 import companyLogo from '../../assets/horse2.jpg'
 
@@ -16,8 +16,18 @@ import { CartContext } from '../../contexts/cart.context';
 
 import CartIcon from '../../components/cart-icon/cart-icon.component';
 
+import {
+    NavigationContainer,
+    LogoContainer,
+    NavLinks,
+    NavLink,
+    Logo,
+    Head,
+    Marquee
+} from './navigation.styles';
 
-import { NavigationContainer } from './navigation.styles';
+
+
 
 const Navigation = () => {
     const {currentUser} = useContext(UserContext);
@@ -27,30 +37,28 @@ const Navigation = () => {
     // console.log(currentUser);
     return(
         <Fragment>
-            <div className='navigation'>
-                <Link className='logo-container' to='/'>
-                <img className='horsepic' src={companyLogo} ></img>
-                <h1>AliBoo </h1>
-                {/* <HorseLogo className='logo'/> */}
-                {/* <marquee>Welcome to AliBOO Farm</marquee><h2></h2> */}
-                </Link>
+            <NavigationContainer>
+            {/* <h1>AliBoo </h1> */}
+                <LogoContainer to='/'>
+                {/* <h1>AliBoo </h1> */}
+                    <Logo src={companyLogo} />
+                    <Head>AliBoo </Head>
+                    {/* <HorseLogo className='logo'/> */}
+                    {/* <marquee>Welcome to AliBOO Farm</marquee><h2></h2> */}
+                </LogoContainer>
                 {/* <h2>Welcome to AliBOO Farm</h2> */}
-                <marquee>Welcome to AliBoo Farm</marquee>
-                <div className='nav-links-container'>
-
-                <Link className='nav-link' to='/shop'>Shop
-                </Link>
-                {currentUser ? (
-                        <span className='nav-link' onClick={signOutUser}>Sign Out </span>
-                        ) : (
-                        <Link className='nav-link' to='/auth'>Sign in
-                        </Link>
-                        )}
+                <Marquee>Welcome to AliBoo Farm</Marquee>
+                <NavLinks>
+                        <NavLink to='/shop'>Shop</NavLink>
+                    {currentUser ? (
+                        <NavLink  as='span' onClick={signOutUser}>Sign Out </NavLink>
+                            ) : (
+                        <NavLink  to='/auth'>Sign in</NavLink>
+                            )}
                         <CartIcon />
-                </div>
+                </NavLinks>
                 {isCartOpen && <CartDropdown /> }
-                
-            </div>
+            </NavigationContainer>
         <Outlet/>
         </Fragment>
     )
@@ -59,4 +67,3 @@ const Navigation = () => {
 export default Navigation;
 
 
-/// burada fragment kullanildi buna tekrar bak//////
