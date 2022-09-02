@@ -13,7 +13,7 @@ import "./sign-in-form.styles.scss";
 
 import  {signInWithGooglePopup,
     signInAuthUserWithEmailAndPassword,
-    createUserDocumentFromAuth} from '../../utils/firebase/firebase.utils'
+    } from '../../utils/firebase/firebase.utils'
 
 
 const defaultFormFields = {
@@ -34,7 +34,6 @@ const SignInForm = () => {
 /// sign in with google pop up method firebase utilden geliyor?
     const signInWithGoogle =async () => {
         await signInWithGooglePopup();
-    
     }
 
     const handleSubmit = async (event) =>{
@@ -79,7 +78,7 @@ const SignInForm = () => {
             <div className='buttons-container'>
             <Button type='submit'>Sign In</Button>
             <Button
-                buttonType='google'
+                buttonType={BUTTON_TYPE_CLASSES.google}
                 type='button'
                 onClick={signInWithGoogle}
             >
