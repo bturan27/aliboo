@@ -22,9 +22,9 @@ const defaultFormFields = {
 }
 
 
-const SignUpForm = () =>{
+const SignUpForm = () => {
     const [formFields, setFormFields] = useState(defaultFormFields);
-    const {fullName, email, password, confirmPassword}= formFields;
+    const {fullName, email, password, confirmPassword} = formFields;
 
 
     console.log('hit');
@@ -33,35 +33,34 @@ const SignUpForm = () =>{
     const resetFormFields = () => {
         setFormFields(defaultFormFields);
     }
-
-
-    const handleSubmit = async (event) =>{
+    const handleSubmit = async (event) => {
         event.preventDefault();
-
+    
         if (password !== confirmPassword) {
         alert('passwords do not match');
         return;
-    }
-
+        }
+    
         try {
-            const { user } = await createAuthUserWithEmailAndPassword(email,password);
-
-            await createUserDocumentFromAuth(user, { fullName});
-            resetFormFields();
-
-        } 
-        catch (error) {
-            if (error.code === "auth/email-already-in-use") {
-            alert("Cannot create user, email already in use");
-            } else {
-        console.log("user creation encountered an error", error);
-            }
+        const { user } = await createAuthUserWithEmailAndPassword(
+            email,
+            password
+        );
+    
+        await createUserDocumentFromAuth(user, { fullName });
+        resetFormFields();
+        } catch (error) {
+        if (error.code === 'auth/email-already-in-use') {
+            alert('Cannot create user, email already in use');
+        } else {
+            console.log('user creation encountered an error', error);
+        }
         }
     };
+
     const handleChange = (event) =>{
         const {name ,value} = event.target
         setFormFields({...formFields,[name]:value})
-        console.log(event);
 }
     return(
         <div className='sign-up-container'>
@@ -101,7 +100,7 @@ const SignUpForm = () =>{
                 name='confirmPassword'
                 value={confirmPassword} 
                 />
-                <Button buttonType='google' type="submit">Sign Up</Button>
+                <Button type="submit">Sign Up</Button>
             </form>
         </div>
     )

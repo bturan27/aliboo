@@ -3,7 +3,7 @@ import {
   GoogleSignInButton,
   InvertedButton,
 }from './button.styles';
-debugger
+
 export const BUTTON_TYPE_CLASSES = {
   base: "base",
   google: "google-sign-in",
