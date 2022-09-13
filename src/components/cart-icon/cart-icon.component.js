@@ -1,4 +1,3 @@
-import "./cart-icon.styles.js";
 
 import { useContext } from "react";
 
