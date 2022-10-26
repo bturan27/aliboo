@@ -13,19 +13,19 @@ const categories = [
   {
     id: 2,
     title: 'Horse-B',
-    imageUrl: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fnationaltoday.com%2Fnational-horse-day%2F&psig=AOvVaw1x-UDG7AjFeiTGAgcM_Qau&ust=1666796460211000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCKC40-nS-_oCFQAAAAAdAAAAABAHhttps://nationaltoday.com/wp-content/uploads/2020/12/National-Horse-Day-1.jpg',
+    imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKR53cLrYwEpSFyxr0hAX7D_TnAHgxtjB1xA&usqp=CAU',
     route: 'shop/horse-b'
   },
   {
     id: 3,
     title: 'Horse-C',
-    imageUrl: 'https://scontent-sea1-1.xx.fbcdn.net/v/t39.30808-6/267130306_4619482618100527_2878475205334164258_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=ZzLSxYYguYMAX8rvl3C&tn=Oo6z2oDmeVkwXeVz&_nc_ht=scontent-sea1-1.xx&oh=00_AT-4Rfnvd5YqAwEslfmnwXFbWki7Rs8Fz1fhmQTaYoMQhQ&oe=632D69DE',
+    imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0KaJvDR9w7PSWNToEeb3CIwPtfT1c_2gN8g&usqp=CAU',
     route: 'shop/horse-c'
   },
   {
     id: 4,
     title: 'Horse-D',
-    imageUrl: 'https://scontent-sea1-1.xx.fbcdn.net/v/t39.30808-6/267130306_4619482618100527_2878475205334164258_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=ZzLSxYYguYMAX8rvl3C&tn=Oo6z2oDmeVkwXeVz&_nc_ht=scontent-sea1-1.xx&oh=00_AT-4Rfnvd5YqAwEslfmnwXFbWki7Rs8Fz1fhmQTaYoMQhQ&oe=632D69DE',
+    imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRk7SijgG4y4Ytr38z1EE4jRlu3IRvqLl0h7g&usqp=CAU',
     route: 'shop/horse-d'
   },
   {
