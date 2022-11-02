@@ -7,7 +7,7 @@ const categories = [
   {
     id: 1,
     title: 'Horse-A',
-    imageUrl:'https://nationaltoday.com/wp-content/uploads/2020/12/National-Horse-Day-1.jpg' ,
+    imageUrl:'https://media.istockphoto.com/photos/brown-pedigree-horse-picture-id521697371?k=20&m=521697371&s=612x612&w=0&h=qjYcrp0OvVtVSH67wX60fFR8gY_JFuAifqWGvmV9PBQ=' ,
     route: 'shop/horse-a'
   },
   {
